@@ -39,6 +39,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cmdCalcular = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        TxtInversion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +96,11 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Inversion Total:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel1.add(TxtInversion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,13 +109,14 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+        String inversion;
         double i1,i2,i3;
         
         if (TxtPersona1.getText().trim().isEmpty()){
@@ -124,6 +132,9 @@ public class Principal extends javax.swing.JFrame {
         i1=Double.parseDouble(TxtPersona1.getText());
         i2=Double.parseDouble(TxtPersona2.getText());
         i3=Double.parseDouble(TxtPersona3.getText());
+        double inver=i1+i2+i3;
+        inversion=String.valueOf(inver);
+     TxtInversion.setText(inversion);
         
         
         }    
@@ -190,6 +201,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtInversion;
     private javax.swing.JTextField TxtPersona1;
     private javax.swing.JTextField TxtPersona2;
     private javax.swing.JTextField TxtPersona3;
@@ -199,6 +211,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
