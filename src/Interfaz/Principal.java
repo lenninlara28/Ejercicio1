@@ -51,8 +51,26 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Ingrese Su Inversión ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 44, -1, 30));
+
+        TxtPersona1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TxtPersona1KeyTyped(evt);
+            }
+        });
         jPanel1.add(TxtPersona1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 100, -1));
+
+        TxtPersona2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TxtPersona2KeyTyped(evt);
+            }
+        });
         jPanel1.add(TxtPersona2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 100, -1));
+
+        TxtPersona3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TxtPersona3KeyTyped(evt);
+            }
+        });
         jPanel1.add(TxtPersona3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 100, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -110,6 +128,31 @@ public class Principal extends javax.swing.JFrame {
         
         }    
     }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void TxtPersona1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtPersona1KeyTyped
+        char c=evt.getKeyChar(); 
+            
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_TxtPersona1KeyTyped
+
+    private void TxtPersona2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtPersona2KeyTyped
+        char c=evt.getKeyChar(); 
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_TxtPersona2KeyTyped
+
+    private void TxtPersona3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtPersona3KeyTyped
+        char c=evt.getKeyChar(); 
+             
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_TxtPersona3KeyTyped
 
     /**
      * @param args the command line arguments
