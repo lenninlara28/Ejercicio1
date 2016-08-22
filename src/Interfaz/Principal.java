@@ -47,6 +47,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         TxtPorcentaje3 = new javax.swing.JTextField();
+        TxtNuevo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,6 +122,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel9.setText("Porcentaje de Persona 3 :");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
         jPanel1.add(TxtPorcentaje3, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 320, 180, -1));
+
+        TxtNuevo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TxtNuevo.setText("Nueva Consulta");
+        TxtNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNuevoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TxtNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -202,6 +212,18 @@ public class Principal extends javax.swing.JFrame {
               evt.consume();}
     }//GEN-LAST:event_TxtPersona3KeyTyped
 
+    private void TxtNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNuevoActionPerformed
+        TxtPersona1.setText("");
+     TxtPersona2.setText("");
+     TxtPersona3.setText("");
+     TxtPorcentaje1.setText("");
+     TxtPorcentaje2.setText("");
+     TxtPorcentaje3.setText("");
+     TxtInversion.setText("");
+     
+     TxtPersona1.requestFocusInWindow();
+    }//GEN-LAST:event_TxtNuevoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,6 +261,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TxtInversion;
+    private javax.swing.JButton TxtNuevo;
     private javax.swing.JTextField TxtPersona1;
     private javax.swing.JTextField TxtPersona2;
     private javax.swing.JTextField TxtPersona3;
