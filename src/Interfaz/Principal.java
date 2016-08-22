@@ -94,7 +94,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel5.setText("Persona 3");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
 
+        cmdCalcular.setBackground(new java.awt.Color(0, 0, 0));
         cmdCalcular.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cmdCalcular.setForeground(new java.awt.Color(255, 255, 255));
         cmdCalcular.setText("OK");
         cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
