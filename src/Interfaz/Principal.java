@@ -41,6 +41,12 @@ public class Principal extends javax.swing.JFrame {
         cmdCalcular = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         TxtInversion = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        TxtPorcentaje1 = new javax.swing.JTextField();
+        TxtPorcentaje2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        TxtPorcentaje3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,6 +107,21 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
         jPanel1.add(TxtInversion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setText(" Porcentaje de Persona1 :");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+        jPanel1.add(TxtPorcentaje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 180, -1));
+        jPanel1.add(TxtPorcentaje2, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 280, 180, 30));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText("Porcentaje de Persona 2:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 150, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("Porcentaje de Persona 3 :");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
+        jPanel1.add(TxtPorcentaje3, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 320, 180, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,14 +130,16 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-        String inversion;
+        String inversion,porcen1,porcen2,porcen3;
         double i1,i2,i3;
         
         if (TxtPersona1.getText().trim().isEmpty()){
@@ -135,6 +158,20 @@ public class Principal extends javax.swing.JFrame {
         double inver=i1+i2+i3;
         inversion=String.valueOf(inver);
      TxtInversion.setText(inversion);
+     
+     
+     double porcentaje1=(i1*100)/inver;
+     double porcentaje2=(i2*100)/inver;
+     double porcentaje3=(i3*100)/inver;
+     
+     porcen1=String.valueOf(porcentaje1);
+     TxtPorcentaje1.setText(porcen1+"%");
+     
+     porcen2=String.valueOf(porcentaje2);
+     TxtPorcentaje2.setText(porcen2+"%");
+     
+     porcen3=String.valueOf(porcentaje3);
+     TxtPorcentaje3.setText(porcen3+"%");
         
         
         }    
@@ -205,6 +242,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField TxtPersona1;
     private javax.swing.JTextField TxtPersona2;
     private javax.swing.JTextField TxtPersona3;
+    private javax.swing.JTextField TxtPorcentaje1;
+    private javax.swing.JTextField TxtPorcentaje2;
+    private javax.swing.JTextField TxtPorcentaje3;
     private javax.swing.JButton cmdCalcular;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -212,6 +252,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
